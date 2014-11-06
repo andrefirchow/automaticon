@@ -1,0 +1,215 @@
+/*
+
+  AUTOICONS for FontAwesome
+  Author: Andre Firchow - http://firchow.net
+
+/**********************************************************/
+
+
+/* Include the 'FontAwesome' (http://fontawesome.io) icon font if not already included within other styles */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../fonts/fontawesome-webfont.eot?v=4.0.3');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.0.3') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff?v=4.0.3') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.0.3') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/**********************************************************
+  GLOBAL STYLES
+*/
+
+.automaticon a {
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.automaticon a:before,
+.automaticon.add-extension a:after {
+  font-weight: normal;
+  line-height: 1;
+}
+
+.automaticon a:before {
+  margin: 0 .3em 0 .1em;
+  font-family: FontAwesome;
+  font-style: normal;
+}
+
+.automaticon.add-extension a:after {
+  margin-left: .3em;
+  font-style: italic;
+  font-size: 70%;
+  opacity: .7;
+}
+
+.automaticon a.no-automaticon:before,
+.automaticon a.no-automaticon:after {
+  content: " " !important;
+}
+
+
+/**********************************************************
+  SETTING UP THE CONTENT
+*/
+
+/*--------------------------------------------------------
+  SELECT BY EXTENSION (FILE TYPES) */
+
+/* Adobe PDF */
+.automaticon [href$=".pdf"]:before { content: "\f016"; }
+.automaticon.add-extension [href$=".pdf"]:after { content: "[PDF]"; }
+
+/* Text-Files like Word or .txt */
+.automaticon [href$=".doc"]:before,
+.automaticon [href$=".rtf"]:before,
+.automaticon [href$=".txt"]:before { content: "\f0f6"; }
+
+.automaticon.add-extension [href$=".doc"]:after { content: "[DOC]"; }
+.automaticon.add-extension [href$=".rtf"]:after { content: "[RTF]"; }
+.automaticon.add-extension [href$=".txt"]:after { content: "[TXT]"; }
+
+/* Excel-Files */
+.automaticon [href$=".xls"]:before,
+.automaticon [href$=".csv"]:before,
+.automaticon [href$=".xlw"]:before,
+.automaticon [href$=".xlt"]:before { content: "\f0ce"; }
+
+.automaticon.add-extension [href$=".xls"]:after { content: "[XLS]"; }
+.automaticon.add-extension [href$=".csv"]:after { content: "[CSV]"; }
+.automaticon.add-extension [href$=".xlw"]:after { content: "[XLW]"; }
+.automaticon.add-extension [href$=".xlt"]:after { content: "[XLT]"; }
+
+/* Feeds */
+.automaticon [href$=".rss"]:before,
+.automaticon [href$=".atom"]:before { content: "\f09e"; }
+
+.automaticon.add-extension [href$=".rss"]:after { content: "[RSS]"; }
+.automaticon.add-extension [href$=".atom"]:after { content: "[ATOM]"; }
+
+/* Compressed File-Types */
+.automaticon [href$=".zip"]:before,
+.automaticon [href$=".gz"]:before,
+.automaticon [href$=".rar"]:before,
+.automaticon [href$=".gzip"]:before,
+.automaticon [href$=".tar"]:before { content: "\f066"; }
+
+.automaticon.add-extension [href$=".zip"]:after { content: "[ZIP]"; }
+.automaticon.add-extension [href$=".gz"]:after { content: "[GZ]"; }
+.automaticon.add-extension [href$=".rar"]:after { content: "[RAR]"; }
+.automaticon.add-extension [href$=".gzip"]:after { content: "[GZIP]"; }
+.automaticon.add-extension [href$=".tar"]:after { content: "[TAR]"; }
+
+/* Image Types */
+.automaticon [href$=".gif"]:before,
+.automaticon [href$=".jpg"]:before,
+.automaticon [href$=".jpeg"]:before,
+.automaticon [href$=".png"]:before,
+.automaticon [href$=".bmp"]:before,
+.automaticon [href$=".svg"]:before,
+.automaticon [href$=".eps"]:before { content: "\f03e"; }
+
+.automaticon.add-extension [href$=".gif"]:after { content: "[GIF]"; }
+.automaticon.add-extension [href$=".jpg"]:after { content: "[JPG]"; }
+.automaticon.add-extension [href$=".jpeg"]:after { content: "[JPEG]"; }
+.automaticon.add-extension [href$=".png"]:after { content: "[PNG]"; }
+.automaticon.add-extension [href$=".bmp"]:after { content: "[BMP]"; }
+.automaticon.add-extension [href$=".svg"]:after { content: "[SVG]"; }
+.automaticon.add-extension [href$=".eps"]:after { content: "[EPS]"; }
+
+/* Audio Files */
+.automaticon [href$=".mp3"]:before,
+.automaticon [href$=".wav"]:before,
+.automaticon [href$=".ogg"]:before,
+.automaticon [href$=".wma"]:before,
+.automaticon [href$=".m4a"]:before { content: "\f026"; }
+
+.automaticon.add-extension [href$=".mp3"]:after { content: "[MP3]"; }
+.automaticon.add-extension [href$=".wav"]:after { content: "[WAV]"; }
+.automaticon.add-extension [href$=".ogg"]:after { content: "[OGG]"; }
+.automaticon.add-extension [href$=".wma"]:after { content: "[WMA]"; }
+.automaticon.add-extension [href$=".m4a"]:after { content: "[M4A]"; }
+
+/* Video Files */
+.automaticon [href$=".mov"]:before,
+.automaticon [href$=".mpg"]:before,
+.automaticon [href$=".mpeg"]:before,
+.automaticon [href$=".mp4"]:before,
+.automaticon [href$=".wmv"]:before,
+.automaticon [href$=".flv"]:before,
+.automaticon [href$=".avi"]:before { content: "\f03d"; }
+
+.automaticon.add-extension [href$=".mov"]:after { content: "[MOV]"; }
+.automaticon.add-extension [href$=".mpg"]:after { content: "[MPG]"; }
+.automaticon.add-extension [href$=".mpeg"]:after { content: "[MPEG]"; }
+.automaticon.add-extension [href$=".mp4"]:after { content: "[MP4]"; }
+.automaticon.add-extension [href$=".wmv"]:after { content: "[WMV]"; }
+.automaticon.add-extension [href$=".flv"]:after { content: "[FLV]"; }
+.automaticon.add-extension [href$=".avi"]:after { content: "[AVI]"; }
+
+/* Vcard */
+.automaticon [href$=".vcard"]:before { content: "\f09d"; }
+.automaticon.add-extension [href$=".vcard"]:after { content: "[VCARD]"; }
+
+/* iCal */
+.automaticon [href$=".ical"]:before { content: "\f073"; }
+.automaticon.add-extension [href$=".ical"]:after { content: "[ICAL]"; }
+
+/* Code */
+.automaticon [href$=".js"]:before,
+.automaticon [href$=".json"]:before,
+.automaticon [href$=".css"]:before { content: "\f121"; }
+
+.automaticon.add-extension [href$=".js"]:after { content: "[JS]"; }
+.automaticon.add-extension [href$=".json"]:after { content: "[JSON]"; }
+.automaticon.add-extension [href$=".css"]:after { content: "[CSS]"; }
+
+
+/*--------------------------------------------------------
+  SELECT BY URL */
+
+.automaticon [href*="twitter.com/"]:before { content: "\f099"; }
+.automaticon [href*="facebook.com/"]:before { content: "\f09a"; }
+.automaticon [href*="plus.google.com/"]:before { content: "\f0d5"; }
+.automaticon [href*="youtube.com/"]:before { content: "\f167"; }
+.automaticon [href*="vimeo.com/"]:before { content: "\f194"; }
+.automaticon [href*="dribbble.com/"]:before { content: "\f17d"; }
+.automaticon [href*="flickr.com/"]:before { content: "\f16e"; }
+.automaticon [href*="github.com/"]:before { content: "\f09b"; }
+.automaticon [href*="stackoverflow.com/"]:before { content: "\f16c"; }
+.automaticon [href*="pinterest.com/"]:before { content: "\f0d2"; }
+.automaticon [href*="instagram.com/"]:before { content: "\f16d"; }
+.automaticon [href*="linkedin.com/"]:before { content: "\f0e1"; }
+.automaticon [href*="skype.com/"]:before,
+.automaticon [href^="skype:"]:before { content: "\f17e"; }
+.automaticon [href*="tumblr.com/"]:before { content: "\f173"; }
+.automaticon [href*="xing.com/"]:before { content: "\f168"; }
+
+.automaticon [href^="callto:"]:before,
+.automaticon [href^="tel:"]:before { content: "\f095"; }
+.automaticon [href^="facetime:"]:before { content: "\f179"; }
+.automaticon [href^="view-source:"]:before { content: "\f121"; }
+.automaticon [href^="mailto:"]:before { content: "\f003"; }
+.automaticon [href^="#"]:before { content: "\f01a"; }
+
+
+/*--------------------------------------------------------
+  SELECT BY ATTRIBUTE */
+
+.automaticon [rel="prev"]:before { content: "\f104"; }
+.automaticon [rel="next"]:before { content: "\f105"; }
+.automaticon [rel="help"]:before { content: "\f128"; }
+.automaticon [rel="search"]:before { content: "\f002"; }
+.automaticon [rel="alternate"]:before { content: "\f042"; }
+.automaticon [rel="author"]:before { content: "\f007"; }
+.automaticon [rel="tag"]:before { content: "\f02b"; }
+.automaticon [rel="bookmark"]:before { content: "\f097"; }
+.automaticon [rel="license"]:before { content: "\f155"; }
+.automaticon [rel="chapter"]:before { content: "\f039"; }
+.automaticon [rel="prefetch"]:before { content: "\f01e"; }
+
+.automaticon [download]:before { content: "\f019"; }
+.automaticon [target="_blank"]:before { content: "\f0c5"; }

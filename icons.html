@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>automaticon - Automatic Icons for Text-Links</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/demo.css">
+        <!-- <link rel="stylesheet" href="css/font-awesome.css"> -->
+        <link rel="stylesheet" href="css/automaticon.css">
+    </head>
+    <body>
+
+        <section class="page-wrapper automaticon add-extension">
+
+            <h1>automat<strong>ic<span>on</span></strong></h1>
+            <h2>Automatic Icons for Text-Links <small class="mute">with FontAwesome</small></h2>
+            <p>With this litte <abbr title="Cascading Style Sheets">CSS</abbr> (9kb) file all textlinks inside a specified container with the class <code>automaticon</code> become a prefixed icon when they match one of the selectors below. You don't have to assign additional classes to the links, the icons will set automatically. The CSS-Selectors check the <a href="#extension">file extension</a> of the linked url, parts of the <a href="#content">content of the url</a> and some <a href="#attr">attributes</a> of all anchor-Tags. For the icons I used the awesome Icon-Font from <a href="http://fontawesome.io/">FontAwesome</a>.</p>
+            <p>If you want a link without an automatic icon set, just add the class <code>no-automaticon</code> to this specified anchor, it will be ignored then. If you add the class <code>add-extension</code> to the container next to <code>automaticon</code>, the file extensions will be added to all links (suffix with smaller font size) which are linked to known extensions automatically. See the examples below.</p>
+
+            <hr>
+
+            <article>
+                <h3 id="extension">CSS-Select by File Extension</h3>
+                <p>
+                    <a href="http://mydomain.com/media/test.pdf">PDF</a> |
+                    <a class="no-automaticon" href="http://mydomain.com/media/test.pdf">PDF [class="no-automaticon"]</a>
+                </p>
+                <p>
+                    <a href="http://mydomain.com/media/test.doc">Text</a> |
+                    <a href="http://mydomain.com/media/test.rtf">Text</a> |
+                    <a href="http://mydomain.com/media/test.txt">Text</a>
+                </p>
+                <p>
+                    <a href="http://mydomain.com/media/test.xls">Table</a> |
+                    <a href="http://mydomain.com/media/test.csv">Table</a> |
+                    <a href="http://mydomain.com/media/test.xlw">Table</a> |
+                    <a href="http://mydomain.com/media/test.xlt">Table</a>
+                </p>
+                <p>
+                    <a href="http://mydomain.com/feed/test.rss">Feed</a> |
+                    <a href="http://mydomain.com/feed/test.atom">Feed</a>
+                </p>
+                <p> 
+                    <a href="http://mydomain.com/media/test.zip">Compressed</a> |
+                    <a href="http://mydomain.com/media/test.gz">Compressed</a> |
+                    <a href="http://mydomain.com/media/test.rar">Compressed</a> |
+                    <a href="http://mydomain.com/media/test.gzip">Compressed</a> |
+                    <a href="http://mydomain.com/media/test.tar">Compressed</a>
+                </p>
+                <p> 
+                    <a href="http://mydomain.com/media/test.gif">Image</a> |
+                    <a href="http://mydomain.com/media/test.jpg">Image</a> |
+                    <a href="http://mydomain.com/media/test.jpeg">Image</a> |
+                    <a href="http://mydomain.com/media/test.png">Image</a> |
+                    <a href="http://mydomain.com/media/test.bmp">Image</a> |
+                    <a href="http://mydomain.com/media/test.svg">Image</a> |
+                    <a href="http://mydomain.com/media/test.eps">Image</a>
+                </p>
+                <p> 
+                    <a href="http://mydomain.com/media/test.mp3">Audio</a> |
+                    <a href="http://mydomain.com/media/test.wav">Audio</a> |
+                    <a href="http://mydomain.com/media/test.ogg">Audio</a> |
+                    <a href="http://mydomain.com/media/test.wma">Audio</a> |
+                    <a href="http://mydomain.com/media/test.m4a">Audio</a>
+                </p>
+                <p> 
+                    <a href="http://mydomain.com/media/test.mov">Video</a> |
+                    <a href="http://mydomain.com/media/test.mpg">Video</a> |
+                    <a href="http://mydomain.com/media/test.mpeg">Video</a> |
+                    <a href="http://mydomain.com/media/test.mp4">Video</a> |
+                    <a href="http://mydomain.com/media/test.wmv">Video</a> |
+                    <a href="http://mydomain.com/media/test.flv">Video</a> |
+                    <a href="http://mydomain.com/media/test.avi">Video</a>
+                </p>
+                <p><a href="media/test.vcard">Vcard</a></p>
+                <p><a href="media/test.ical">iCal</a></p>
+                <p> 
+                    <a href="http://mydomain.com/media/test.js">Code</a> |
+                    <a href="http://mydomain.com/media/test.json">Code</a> |
+                    <a href="http://mydomain.com/media/test.css">Code</a>
+                </p>
+
+                <hr>
+
+                <h3 id="content">CSS-Select by URLs content</h3>
+                <h4 class="mute">URL contains or starts with 'xxx'</h4>
+                <p><a href="http://www.facebook.com/">Facebook [href*="facebook.com/"]</a></p>
+                <p><a href="http://www.twitter.com/">Twitter [href*="twitter.com/"]</a></p>
+                <p><a href="http://plus.google.com/">Google+ [href*="plus.google.com/"]</a></p>
+                <p><a href="http://www.youtube.com/">YouTube [href*="youtube.com/"]</a></p>
+                <p><a href="http://vimeo.com/">Vimeo [href*="vimeo.com/"]</a></p>
+                <p><a href="http://dribbble.com/">Dribbble [href*="dribbble.com/"]</a></p>
+                <p><a href="http://flickr.com/">Flickr [href*="flickr.com/"]</a></p>
+                <p><a href="http://github.com/">Github [href*="github.com/"]</a></p>
+                <p><a href="http://stackoverflow.com/">Stack Overflow [href*="stackoverflow.com/"]</a></p>
+                <p><a href="http://www.pinterest.com/">Pinterest [href*="pinterest.com/"]</a></p>
+                <p><a href="http://instagram.com/">Instagram [href*="instagram.com/"]</a></p>
+                <p><a href="http://linkedin.com/">LinkedIn [href*="linkedin.com/‎"]</a></p>
+                <p>
+                    <a href="http://skype.com/">Skype [href*="skype.com/"]</a> |
+                    <a href="skype:skype_user?call">Skype [href^="skype:"]</a>
+                </p>
+                <p><a href="http://tumblr.com/">Tumblr [href*="tumblr.com/"]</a></p>
+                <p><a href="http://xing.com/">Xing [href*="xing.com/"]</a></p>
+
+                <p>
+                    <a href="callto:0123456789">Phone [href^="callto:"]</a> |
+                    <a href="tel:0123456789">Phone [href^="tel:"]</a>
+                </p>
+                <p><a href="facetime://4444444444">Facetime [href^="facetime:"]</a></p>
+                <p><a href="view-source:xxx">Source [href^="view-source:"]</a></p>
+                <p><a href="mailto:test@test.de">E-Mail [href^="mailto:"]</a></p>
+                <p><a href="#anchor">Anchor [href^="#"]</a></p>
+
+                <hr>
+
+                <h3 id="attr">CSS-Select by the attribute</h3>
+                <p><a rel="next" href="http://mydomain.com/">Next [rel="next"]</a></p>
+                <p><a rel="prev" href="http://mydomain.com/">Previous [rel="prev"]</a></p>
+                <p><a rel="help" href="http://mydomain.com/">Help [rel="help"]</a></p>
+                <p><a rel="search" href="http://mydomain.com/">Search [rel="search"]</a></p>
+                <p><a rel="alternate" href="http://mydomain.com/">Alternate [rel="alternate"]</a></p>
+                <p><a rel="author" href="http://mydomain.com/">Author [rel="author"]</a></p>
+                <p><a rel="tag" href="http://mydomain.com/">Tag [rel="tag"]</a></p>
+                <p><a rel="bookmark" href="http://mydomain.com/">Bookmark [rel="bookmark"]</a></p>
+                <p><a rel="license" href="http://mydomain.com/">License [rel="license"]</a></p>
+                <p><a rel="chapter" href="http://mydomain.com/">Chapter [rel="chapter"]</a></p>
+                <p><a rel="prefetch" href="http://mydomain.com/">Prefetch [rel="prefetch"]</a></p>
+                <p><a download href="http://mydomain.com/">Download [download]</a></p>
+                <p><a target="_blank" href="http://mydomain.com/">New Window [target="_blank"]</a></p>
+
+                <hr>
+
+                <h3>Copytext Example</h3>
+                <p>
+                    This little example shows how to use automaticon and how the icons looks like inside a copytext. You can reach <a rel="author" title="Author: Andre Firchow" href="http://firchow.net">me</a> via <a href="http://facebook.com/andrefirchow">Facebook</a> and/or <a href="http://xing.com/andrefirchow">Xing</a> by the way.
+                </p>
+                <p>
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+
+                <hr>
+
+            </article>
+
+            <footer class="page-footer"><small>CSS by <a href="http://firchow.net/">Andre Firchow</a></small></footer>
+
+        </section>
+
+    </body>
+</html>
